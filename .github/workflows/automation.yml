@@ -1,0 +1,13 @@
+name: Build and Release MarestellaCode
+on: push
+jobs:
+  build-project:
+    name: MarestellaCode Store
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install yarn dependancies
+        uses: yarn
+      - name: Build static website
+        uses: yarn build
