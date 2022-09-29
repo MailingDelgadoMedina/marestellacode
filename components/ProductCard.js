@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { formatter } from "../utils/helpers";
 export const ProductCard = ({ product }) => {
   const { handle, title } = product.node;
   const { altText, originalSrc } = product.node.images.edges[0].node;
+  const price = product.node.priceRange.minVariantPrice.amount;
+
   return (
     <Link href={`/product/${handle}`}>
       <a className="group">
@@ -18,6 +20,7 @@ export const ProductCard = ({ product }) => {
           </div>
         </div>
         <h3 className="mt-4 text-lg font-medium text-gray-900 ">{title}</h3>
+        <p className="mt-1 text-sm text-gray-700">{formatter.format(price)}</p>
       </a>
     </Link>
   );
