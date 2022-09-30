@@ -1,0 +1,23 @@
+name: myaction
+
+on: 
+  push:
+    branches:[main]
+
+jobs:
+  lintTest:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
+      - name: Install Dependancies
+        run: |
+          echo "Running Installin Dependancies ..."
+          yarn install
+      - name: Run Linting
+        run: |
+          echo "Running Linting test ..."
+          yarn lint
+        env:
+          CI: true
