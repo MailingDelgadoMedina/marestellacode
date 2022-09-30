@@ -21,7 +21,6 @@ jobs:
           yarn lint
         env:
           CI: true
-      
   securityCheck:
     name: Security Check
     runs-on: ubuntu-latest
