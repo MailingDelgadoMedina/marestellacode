@@ -1,4 +1,4 @@
-name: myaction
+name: my action
 
 on: 
   push:
