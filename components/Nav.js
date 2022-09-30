@@ -1,4 +1,6 @@
+// Just test
 import Link from "next/link";
+
 export default function Nav() {
   return (
     <header className="text-gray-200 border-b sticky top-0 z-20 bg-slate-800">
