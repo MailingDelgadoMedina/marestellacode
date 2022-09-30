@@ -8,8 +8,7 @@ const nextConfig = {
     SHOPIFY_STORE_DOMAIN: process.env.SHOPIFY_STORE_DOMAIN,
   },
   images: {
-    loader:"akamai",
-    path:"",
+   
     domains: ["cdn.shopify.com"],
   },
 };
